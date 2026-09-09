@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Capital — Accueil</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: #f5f0eb;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 3rem;
+            padding: 4rem 3rem;
+            border: 1px solid #e8e0d8;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== BACKGROUND EFFECTS ===== */
+        .bg-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        .bg-glow.g1 {
+            width: 400px;
+            height: 400px;
+            background: #f7931a;
+            top: -150px;
+            right: -100px;
+            opacity: 0.06;
+        }
+        .bg-glow.g2 {
+            width: 300px;
+            height: 300px;
+            background: #ffd700;
+            bottom: -100px;
+            left: -80px;
+            opacity: 0.05;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+        .logo .orange { color: #f7931a; }
+        .logo .icon { font-size: 3.5rem; }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #8a7a6a;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+
+        .description {
+            font-size: 1.05rem;
+            color: #5a4a3a;
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .link-card {
+            display: inline-block;
+            background: #faf8f6;
+            border-radius: 1.5rem;
+            padding: 2rem 3rem;
+            border: 2px solid #f7931a;
+            transition: 0.3s;
+            text-decoration: none;
+            color: #1a1a1a;
+            min-width: 280px;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(247, 147, 26, 0.15);
+            border-color: #e67e22;
+        }
+
+        .link-card .main-link {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #f7931a;
+            display: block;
+        }
+
+        .link-card .main-link .arrow {
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .link-card:hover .main-link .arrow {
+            transform: translateX(6px);
+        }
+
+        .link-card .link-sub {
+            font-size: 0.85rem;
+            color: #8a7a6a;
+            margin-top: 0.3rem;
+            display: block;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: #f7931a;
+            margin: 2rem auto;
+            border-radius: 2px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f5f0eb;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            color: #8a7a6a;
+            border: 1px solid #e8e0d8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer {
+            margin-top: 2.5rem;
+            font-size: 0.7rem;
+            color: #b0a090;
+        }
+
+        .footer strong { color: #f7931a; }
+
+        @media (max-width: 600px) {
+            .container { padding: 2.5rem 1.5rem; border-radius: 2rem; }
+            .logo { font-size: 2.8rem; }
+            .logo .icon { font-size: 2.5rem; }
+            .link-card { padding: 1.5rem 2rem; min-width: unset; width: 100%; }
+            .link-card .main-link { font-size: 1.4rem; }
+        }
+
+        @media (max-width: 400px) {
+            .logo { font-size: 2.2rem; flex-wrap: wrap; }
+            .logo .icon { font-size: 2rem; }
+            .description { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== BACKGROUND EFFECTS ===== -->
+    <div class="bg-glow g1"></div>
+    <div class="bg-glow g2"></div>
+
+    <!-- ===== CONTENT ===== -->
+    <div class="badge">🏛️ Gestion d'Investissement</div>
+
+    <div class="logo">
+        <span class="icon">🏛️</span>
+        NOVO <span class="orange">CAPITAL</span>
+    </div>
+
+    <div class="subtitle">Londres · Paris · Genève</div>
+
+    <div class="divider"></div>
+
+    <p class="description">
+        Accédez à nos opportunités d'investissement exclusives avec rendement minimum garanti.
+        Découvrez nos contrats de trading et nos accords avec entreprises partenaires.
+    </p>
+
+    <!-- ===== LIEN VERS LA PAGE D'INFORMATION ===== -->
+    <a href="novo-capital-signature.html" class="link-card">
+        <span class="main-link">
+            📊 Novo Capital
+            <span class="arrow">→</span>
+        </span>
+        <span class="link-sub">Voir les contrats disponibles</span>
+    </a>
+
+    <div class="divider" style="width:40px; opacity:0.3;"></div>
+
+    <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top:0.5rem; font-size:0.8rem; color:#8a7a6a;">
+        <span>📈 2× Rendement</span>
+        <span>⏱️ 14 Jours</span>
+        <span>🔒 Sécurisé</span>
+    </div>
+
+    <div class="footer">
+        © 2026 Novo Capital Ltd. · <strong>Investissez Malin</strong>
+    </div>
+
+</div>
+
+</body>
+</html>
