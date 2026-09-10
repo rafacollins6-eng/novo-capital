@@ -683,47 +683,45 @@
         
 
         <!-- ===== SIGNATURE SECTION ===== -->
-        <div class="signature-section">
-            <div class="signature-box">
-                <h4>👤 Représentant de l'Entreprise</h4>
-                <div class="line"><strong>Nom :</strong> <span class="name">Marcus FOSTER</span></div>
-                <div class="line"><strong>Titre :</strong> <span class="name">Expert Financier</span></div>
-                <div class="line" style="border-bottom: 2px solid #f7931a; min-height:3rem;">
-                    <span style="color:#8a7a6a;">Signature :</span>
-                    <span style="color:#f7931a; font-family: 'Brush Script MT', cursive; font-size:1.4rem;">Marcus Foster</span>
-                </div>
-            </div>
-            <div class="signature-box">
-                <h4>📝 Signature du Client</h4>
+<div class="signature-section">
+    <div class="signature-box">
+        <h4>👤 Représentant de l'Entreprise</h4>
+        <div class="line"><strong>Nom :</strong> <span class="name">Marcus FOSTER</span></div>
+        <div class="line"><strong>Titre :</strong> <span class="name">Expert Financier</span></div>
+        <div class="line" style="border-bottom: 2px solid #f7931a; min-height:3rem;">
+            <span style="color:#8a7a6a;">Signature :</span>
+            <span style="color:#f7931a; font-family: 'Brush Script MT', cursive; font-size:1.4rem;">Marcus Foster</span>
+        </div>
+    </div>
+    <div class="signature-box">
+        <h4>📝 Signature du Client</h4>
 
-                <!-- Nom du Client -->
-                <div class="line">
-                    <span class="label-text">Nom du Client</span>
-                    <input type="text" class="signature-input" id="clientName" placeholder="Entrez votre nom complet">
-                </div>
-
-                <!-- Signature (style manuscrit) -->
-                <div class="line" style="min-height:4rem;">
-                    <span class="label-text">Signature</span>
-                    <input type="text" class="signature-input signature-field" id="clientSignature" placeholder="Signez ici (style manuscrit)">
-                    <div class="signature-preview" id="signaturePreview"></div>
-                </div>
-
-                <!-- Date -->
-                <div class="line">
-                    <span class="label-text">Date</span>
-                    <input type="date" class="signature-input" id="clientDate" style="width:auto; max-width:200px; display:inline-block;">
-                    <span id="dateDisplay" style="color:#1a1a1a; font-weight:600; margin-left:0.5rem;"></span>
-                </div>
-            </div>
+        <!-- Nom du Client -->
+        <div class="line">
+            <span class="label-text">Nom du Client</span>
+            <input type="text" class="signature-input" id="clientName" placeholder="Entrez votre nom complet">
         </div>
 
-        <!-- ===== FOOTER ===== -->
-        <div class="footer">
-            © 2026 Novo Capital Ltd. Tous droits réservés. · 34-35 Clarges Street, Mayfair, London, W1J 7EJ<br>
-            <strong>Investissez Malin · Doublez Votre Rendement · Contrats de 14 Jours</strong>
+        <!-- Signature -->
+        <div class="line" style="min-height:4rem;">
+            <span class="label-text">Signature</span>
+            <input type="text" class="signature-input signature-field" id="clientSignature" placeholder="Signez ici (style manuscrit)">
+            <div class="signature-preview" id="signaturePreview"></div>
         </div>
 
+        <!-- Date -->
+        <div class="line">
+            <span class="label-text">Date</span>
+            <input type="date" class="signature-input" id="clientDate" style="width:auto; max-width:200px; display:inline-block;">
+            <span id="dateDisplay" style="color:#1a1a1a; font-weight:600; margin-left:0.5rem;"></span>
+        </div>
+
+        <!-- КНОПКА -->
+        <div style="margin-top:1.2rem;">
+            <button class="btn-generate" id="generateBtn" onclick="generateContract()" disabled>
+                📄 Générer mon contrat
+            </button>
+        </div>
     </div>
 </div>
 
