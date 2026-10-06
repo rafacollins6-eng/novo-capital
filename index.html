@@ -3,225 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobalFinancialMarket — Accueil</title>
+    <title>GlobalFinancialMarket - Contrats Disponibles</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            background: #f5f0eb;
-            color: #1a1a1a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 1rem;
+            padding: 20px;
         }
-
         .container {
-            max-width: 800px;
-            width: 100%;
             background: #ffffff;
-            border-radius: 3rem;
-            padding: 4rem 3rem;
-            border: 1px solid #e8e0d8;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+            border-radius: 24px;
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-
-        /* ===== BACKGROUND EFFECTS ===== */
-        .bg-glow {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(120px);
-            pointer-events: none;
-            opacity: 0.3;
-        }
-        .bg-glow.g1 {
-            width: 400px;
-            height: 400px;
-            background: #f7931a;
-            top: -150px;
-            right: -100px;
-            opacity: 0.06;
-        }
-        .bg-glow.g2 {
-            width: 300px;
-            height: 300px;
-            background: #ffd700;
-            bottom: -100px;
-            left: -80px;
-            opacity: 0.05;
-        }
-
         .logo {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #1a1a1a;
-            margin-bottom: 0.3rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.8rem;
+            gap: 12px;
+            margin-bottom: 20px;
         }
-        .logo .orange { color: #f7931a; }
-        .logo .icon { font-size: 3.5rem; }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: #8a7a6a;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 2.5rem;
-        }
-
-        .description {
-            font-size: 1.05rem;
-            color: #5a4a3a;
-            max-width: 500px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.7;
-        }
-
-        .link-card {
-            display: inline-block;
-            background: #faf8f6;
-            border-radius: 1.5rem;
-            padding: 2rem 3rem;
-            border: 2px solid #f7931a;
-            transition: 0.3s;
-            text-decoration: none;
+        .logo-icon {
+            font-size: 40px;
             color: #1a1a1a;
-            min-width: 280px;
         }
-
-        .link-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 40px rgba(247, 147, 26, 0.15);
-            border-color: #e67e22;
-        }
-
-        .link-card .main-link {
-            font-size: 1.8rem;
+        .logo-text {
+            font-size: 32px;
             font-weight: 800;
-            color: #f7931a;
-            display: block;
+            letter-spacing: 1px;
         }
-
-        .link-card .main-link .arrow {
-            display: inline-block;
-            transition: 0.3s;
+        .logo-text .black {
+            color: #1a1a1a;
         }
-
-        .link-card:hover .main-link .arrow {
-            transform: translateX(6px);
+        .logo-text .orange {
+            color: #f5a623;
         }
-
-        .link-card .link-sub {
-            font-size: 0.85rem;
-            color: #8a7a6a;
-            margin-top: 0.3rem;
-            display: block;
-        }
-
         .divider {
             width: 60px;
             height: 3px;
-            background: #f7931a;
-            margin: 2rem auto;
+            background: #f5a623;
+            margin: 0 auto 30px;
             border-radius: 2px;
         }
-
-        .badge {
-            display: inline-block;
-            background: #f5f0eb;
-            padding: 0.3rem 1.2rem;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            color: #8a7a6a;
-            border: 1px solid #e8e0d8;
-            margin-bottom: 1.5rem;
+        h1 {
+            font-size: 24px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
         }
-
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .contracts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .contract-card {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        .contract-card:hover {
+            border-color: #f5a623;
+            box-shadow: 0 5px 20px rgba(245, 166, 35, 0.1);
+        }
+        .contract-card h3 {
+            font-size: 16px;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        .contract-card .details {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 14px;
+        }
+        .contract-card .details .return {
+            color: #f5a623;
+            font-weight: 700;
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            border: 2px solid #f5a623;
+            color: #1a1a1a;
+            padding: 14px 30px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: #f5a623;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
         .footer {
-            margin-top: 2.5rem;
-            font-size: 0.7rem;
-            color: #b0a090;
+            color: #aaa;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 30px;
         }
-
-        .footer strong { color: #f7931a; }
-
-        @media (max-width: 600px) {
-            .container { padding: 2.5rem 1.5rem; border-radius: 2rem; }
-            .logo { font-size: 2.8rem; }
-            .logo .icon { font-size: 2.5rem; }
-            .link-card { padding: 1.5rem 2rem; min-width: unset; width: 100%; }
-            .link-card .main-link { font-size: 1.4rem; }
+        .footer a {
+            color: #f5a623;
+            text-decoration: none;
+            font-weight: 600;
         }
-
-        @media (max-width: 400px) {
-            .logo { font-size: 2.2rem; flex-wrap: wrap; }
-            .logo .icon { font-size: 2rem; }
-            .description { font-size: 0.95rem; }
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .logo-text {
+                font-size: 24px;
+            }
+            .logo-icon {
+                font-size: 30px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <span class="logo-icon">🏛️</span>
+            <div class="logo-text">
+                <span class="black">GLOBAL</span><span class="orange">FINANCIALMARKET</span>
+            </div>
+        </div>
 
-<div class="container">
+        <!-- Divider -->
+        <div class="divider"></div>
 
-    <!-- ===== BACKGROUND EFFECTS ===== -->
-    <div class="bg-glow g1"></div>
-    <div class="bg-glow g2"></div>
+        <!-- Title -->
+        <h1>Contrats Disponibles</h1>
+        <p>Découvrez nos contrats de trading et nos accords avec entreprises partenaires.</p>
 
-    <!-- ===== CONTENT ===== -->
-    <div class="badge">🏛️ Gestion d'Investissement</div>
+        <!-- Contracts List -->
+        <div class="contracts">
+            <div class="contract-card">
+                <h3>Contrat Starter</h3>
+                <div class="details">
+                    <span>Investissement: 500 €</span>
+                    <span class="return">2× Rendement</span>
+                </div>
+            </div>
+            <div class="contract-card">
+                <h3>Contrat Premium</h3>
+                <div class="details">
+                    <span>Investissement: 2 000 €</span>
+                    <span class="return">2.5× Rendement</span>
+                </div>
+            </div>
+            <div class="contract-card">
+                <h3>Contrat Elite</h3>
+                <div class="details">
+                    <span>Investissement: 10 000 €</span>
+                    <span class="return">3× Rendement</span>
+                </div>
+            </div>
+        </div>
 
-    <div class="logo">
-        <span class="icon">🏛️</span>
-        NOVO <span class="orange">CAPITAL</span>
+        <!-- Back Button -->
+        <a href="index.html" class="back-button">
+            ← Retour à l'accueil
+        </a>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 GlobalFinancialMarket Ltd. · <a href="#">Investissez Malin</a>
+        </div>
     </div>
-
-    <div class="subtitle">Londres · Paris · Genève</div>
-
-    <div class="divider"></div>
-
-    <p class="description">
-        Accédez à nos opportunités d'investissement exclusives avec rendement minimum garanti.
-        Découvrez nos contrats de trading et nos accords avec entreprises partenaires.
-    </p>
-
-    <!-- ===== LIEN VERS LA PAGE D'INFORMATION ===== -->
-    <a href="novo-capital-signature.html" class="link-card">
-        <span class="main-link">
-            📊 Novo Capital
-            <span class="arrow">→</span>
-        </span>
-        <span class="link-sub">Voir les contrats disponibles</span>
-    </a>
-
-    <div class="divider" style="width:40px; opacity:0.3;"></div>
-
-    <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top:0.5rem; font-size:0.8rem; color:#8a7a6a;">
-        <span>📈 2× Rendement</span>
-        <span>⏱️ 14 Jours</span>
-        <span>🔒 Sécurisé</span>
-    </div>
-
-    <div class="footer">
-        © 2026 Novo Capital Ltd. · <strong>Investissez Malin</strong>
-    </div>
-
-</div>
-
 </body>
 </html>
